@@ -2,7 +2,6 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3050",
   "dependencies": {
     "clipboard-js": "^0.3.6",
     "immer": "^1.2.1",
@@ -19,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && rm -r ../build && mv build ../",
+    "build": "react-scripts build && cp _redirects build/_redirects",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
