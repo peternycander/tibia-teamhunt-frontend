@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import media from 'globals/media';
-import colors from 'globals/colors';
+import styled from "styled-components";
+import media from "globals/media";
+import colors from "globals/colors";
 
 export const Sidebar = styled.div`
   grid-area: sidebar;
@@ -31,7 +31,7 @@ export const AppWrapper = styled.div`
   grid-template-areas:
     'sidebar header header header header header'
     'sidebar body body body body body';
-  grid-template-rows: 12vh auto auto;
+  grid-template-rows: 12vh auto;
   ${media.smallDesktop`
   margin-left: 5vw;  
   grid-template-areas:
@@ -46,5 +46,11 @@ export const SubHeader = styled.h3`
 
 export const FeedbackHint = styled.div`
   font-size: 10px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
   font-style: italic;
+  a {
+    text-decoration: underline;
+  }
 `;

@@ -10,7 +10,6 @@ import GuildBlacklist from './GuildBlacklist';
 import {Sidebar, Body, AppWrapper, SubHeader, FeedbackHint} from './styled';
 
 const App = ({
-  styled,
   updateLevel,
   updateWorld,
   world,
@@ -26,18 +25,6 @@ const App = ({
 }) => (
   <AppWrapper>
     <Header>Tibia Teamhunt</Header>
-    <Sidebar>
-      <FeedbackHint>
-        Psst! I would love feedback at{' '}
-        <a href='mailto:peter.nycander@gmail.com'>peter.nycander@gmail.com</a>
-      </FeedbackHint>
-      <GuildBlacklist
-        world={world}
-        addGuildToBlacklist={addGuildToBlacklist}
-        removeGuildFromBlacklist={removeGuildFromBlacklist}
-        blacklistedGuilds={blacklistedGuilds}
-      />
-    </Sidebar>
     <Body>
       <SubHeader>Pick your world</SubHeader>
       <WorldPicker
@@ -56,6 +43,18 @@ const App = ({
         loadPlayers={loadPlayers}
       />
     </Body>
+    <Sidebar>
+      <GuildBlacklist
+        world={world}
+        addGuildToBlacklist={addGuildToBlacklist}
+        removeGuildFromBlacklist={removeGuildFromBlacklist}
+        blacklistedGuilds={blacklistedGuilds}
+      />
+    </Sidebar>
+    <FeedbackHint>
+      Made by{' '}
+      <a target='_blank' rel='noopener noreferrer' href='https://www.peternycander.com'>Peter Nycander</a>
+    </FeedbackHint>
   </AppWrapper>
 );
 
